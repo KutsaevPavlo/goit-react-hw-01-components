@@ -1,10 +1,11 @@
-import {StatisticItems} from './StatisticsItem'
+import {StatisticItems} from './StatisticsItem';
+import css from "./Statistics.module.css";
 
 export const Statistics = ({title, stats}) =>(
-<section class="statistics">
-  <h2 class="title">{title}</h2>
+<section className={css.statistics}>
+  <h2 className={css.title}>{title}</h2>
 
-  <ul class="stat-list">
+  <ul className={css.statList}>
    <StatisticItems stats={stats}/>
   </ul>
 </section>

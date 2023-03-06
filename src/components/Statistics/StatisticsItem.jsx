@@ -1,9 +1,11 @@
+import css from "./Statistics.module.css";
+
 
 export const StatisticItems = ({stats}) => {
     return stats.map(items =>{
-            return (<li class="item">
-            <span class="label">{items.label}</span>
-            <span class="percentage">{items.percentage}</span>
+            return (<li className={css.item}>
+            <span className={css.label}>{items.label}</span>
+            <span className={css.percentage}>{items.percentage}%</span>
           </li>);
           
         });

@@ -1,19 +1,25 @@
 import { TransactionHistory } from "./TransactionHistory";
+import css from "./Transaction.module.css";
 
 export const Transaction = ({items}) => (
 
-<table class="transaction-history">
+<table >
                 <thead>
-                  <tr>
+                  <tr className={css.transactionHistory}>
                     <th>Type</th>
                     <th>Amount</th>
                     <th>Currency</th>
                   </tr>
                 </thead>
                 
-                 <TransactionHistory items={items}/>
-                
+
+                <tbody className={css.transactionItems}>
+                  <TransactionHistory items={items}/>
+                </tbody>
+                                 
               </table>
 
 
     );
+
+    

@@ -1,5 +1,6 @@
 import {StatisticItems} from './StatisticsItem';
 import css from "./Statistics.module.css";
+import PropTypes from "prop-types";
 
 export const Statistics = ({title, stats}) =>(
 <section className={css.statistics}>
@@ -10,3 +11,10 @@ export const Statistics = ({title, stats}) =>(
   </ul>
 </section>
 );
+
+Statistics.propTypes = {
+    
+  title: PropTypes.string.isRequired,
+      
+  };
+  

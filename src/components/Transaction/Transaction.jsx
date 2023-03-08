@@ -1,25 +1,11 @@
 import { TransactionHistory } from "./TransactionHistory";
-import css from "./Transaction.module.css";
+import PropTypes from "prop-types";
+
 
 export const Transaction = ({items}) => (
+  <TransactionHistory items={items}/>);
 
-<table >
-                <thead>
-                  <tr className={css.transactionHistory}>
-                    <th>Type</th>
-                    <th>Amount</th>
-                    <th>Currency</th>
-                  </tr>
-                </thead>
-                
-
-                <tbody className={css.transactionItems}>
-                  <TransactionHistory items={items}/>
-                </tbody>
-                                 
-              </table>
-
-
-    );
-
-    
+  TransactionHistory.propTypes = {
+    items: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+  };
+  

@@ -1,7 +1,3 @@
-.friendList{
-
-}
-
 .item{
     display: flex;
     justify-content: space-around;
@@ -23,12 +19,4 @@ background-color: #f50606;
 
 .isOnline{
 background-color: #076b28;
-}
-
-.avatar{
-
-}
-
-.name{
-
 }

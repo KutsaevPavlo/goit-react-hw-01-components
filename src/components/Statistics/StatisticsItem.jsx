@@ -3,14 +3,12 @@ import PropTypes from "prop-types";
 
 
 export const StatisticItems = ({stats}) => {
-    return stats.map(items =>{
-            return (<li key={items.id} className={css.item}>
-            <span className={css.label}>{items.label}</span>
-            <span className={css.percentage}>{items.percentage}%</span>
+    return stats.map(({id, label, percentage}) => {
+            return (<li key={id} className={css.item}>
+            <span className={css.label}>{label}</span>
+            <span className={css.percentage}>{percentage}%</span>
           </li>);
-          
-        });
-
+  });
 }
 
 

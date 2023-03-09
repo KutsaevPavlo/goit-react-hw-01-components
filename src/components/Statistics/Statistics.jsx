@@ -6,10 +6,10 @@ export const Statistics = ({title, stats}) =>(
 {title && <h2 className={css.title}>{title}</h2>}
 
   <ul className={css.statList}>
-   { stats.map(items =>{
-      return (<li key={items.id} className={css.item}>
-      <span className={css.label}>{items.label}</span>
-      <span className={css.percentage}>{items.percentage}%</span>
+   { stats.map(({id, label, percentage}) =>{
+      return (<li key={id} className={css.item}>
+      <span className={css.label}>{label}</span>
+      <span className={css.percentage}>{percentage}%</span>
     </li>);
     })
     }
@@ -18,7 +18,13 @@ export const Statistics = ({title, stats}) =>(
 );
 
 Statistics.propTypes = {
- title: PropTypes.string.isRequired,
+ title: PropTypes.string,
+ stats: PropTypes.arrayOf(PropTypes.exact
+  ({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+  }))
  };
   
 
